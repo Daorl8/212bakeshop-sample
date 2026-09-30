@@ -1,5 +1,15 @@
 # CHANGELOG — 212Bakeshop (212베이크샵 · @212bakeshop)
 
+## v0.3 — 2026-09-30
+- 동화 문구 라벨 정리: Chapter I → **Our Story**, Chapter II → **Menu**, Picture Book → **Gallery**. Gift Boxes·Events & Pop-ups는 제목이 곧 섹션명이라 라벨 삭제(중복 방지). "The End… for now" 라벨 삭제 + 제목 "Come visit us" → **Visit Us**. 상단 메뉴 "Bakes" → **Menu**. 라벨 옆 ✦(워드마크 반짝이)는 유지.
+
+## v0.2 — 2026-09-30 (다올 수정)
+- 다올 정정: "옛날 동화"는 분위기·폰트·느낌 얘기였고 문구 컨셉으로 고수하라는 뜻 아님.
+- 히어로: "Once upon a time, in a little bakeshop…" → **"212 BAKESHOP"**, 그 위 로고 워드마크(212Bakeshop)와 "A LITTLE BAKESHOP IN SONGDO" 줄 삭제 → 토끼 그림만 두고 제목이 상호명(중복 제거). og:description·OG 이미지의 동화 문구도 교체(OG 하단 = "소소한 일상에 행복을 선물해요 :)").
+- 버터떡: 글 카드 → 다올 제공 사진(658986345, 조개 모양 버터떡 + 버터 소스 컵) tb-buttertteok.webp 540×720, 아치 액자 하단에 NEW 태그. 설명에 "Crisp outside, chewy within." 합침.
+- 섹션 제목: "Tied with a ribbon" → **Gift Boxes**, "Sometimes, we travel" → **Events & Pop-ups**.
+- tb-logo.webp 미사용 → .assetsignore.
+
 ## v0.1 — 2026-09-30 (최초 시안 · 9.9 원페이지)
 - **브리프(다올)**: 로고 이미지(486040009, 두 토끼) 색을 그대로 · 파스텔 옛날 동화 느낌 · 영어 위주 · 손글씨 느낌 폰트.
 - **색(로고 실측 그대로)**: 피치 #F3CAB1(바탕) · 핑크 토끼 #E1B4A3(교차 섹션) · 갈색 토끼 #C99474/#B97C59(장식) · 워드마크 갈색 #96472A(제목·버튼) · 귀 안쪽 #855E37 · 볼터치 #D74A39(점 장식). 파생 2색만 추가: 본문 #6A3520(워드마크 갈색을 짙게, 대비용) · 크림 #FFF4EC(갈색 위 글자).

@@ -11,7 +11,7 @@
 <meta property="og:type" content="website" />
 <meta property="og:site_name" content="212Bakeshop 212베이크샵" />
 <meta property="og:title" content="212Bakeshop · 212베이크샵" />
-<meta property="og:description" content="Once upon a time, in a little bakeshop… 소소한 일상에 행복을 선물해요 :)" />
+<meta property="og:description" content="Canelé &amp; handmade desserts in Songdo. 소소한 일상에 행복을 선물해요 :)" />
 <meta property="og:url" content="https://212bakeshop-sample.lgt3232.workers.dev/" />
 <meta property="og:image" content="https://212bakeshop-sample.lgt3232.workers.dev/og-212bakeshop.jpg" />
 <meta property="og:image:width" content="1200" />
@@ -132,7 +132,6 @@ section[id]{ scroll-margin-top:64px; }
 .hero{ padding:clamp(34px,6vw,70px) 0 clamp(50px,7vw,86px); }
 .hero-grid{ display:grid; gap:34px; align-items:center; }
 .hero-logo{ width:min(92%,420px); margin:0 auto 8px; }
-.hero .eyebrow{ font-family:var(--hand); color:var(--ink); font-size:1.12rem; letter-spacing:.14em; margin:0 0 4px; }
 .hero h1{ font-family:var(--hand); font-weight:400; color:var(--brown); font-size:clamp(2.2rem,6.4vw,3.7rem); line-height:1.1; margin:0 0 16px; }
 .hero p{ margin:0 0 .5em; }
 .hero .kr-lead{ color:var(--ink); font-size:.96rem; }
@@ -154,11 +153,9 @@ section[id]{ scroll-margin-top:64px; }
 .bake h3{ font-family:var(--hand); font-weight:400; font-size:1.7rem; color:var(--brown); margin:14px 0 0; line-height:1.2; }
 .bake h3 small{ display:block; font-family:var(--body); font-weight:400; font-size:.86rem; color:var(--ink); margin-top:2px; }
 .bake p{ margin:8px auto 0; font-size:.94rem; max-width:22em; }
-.new-card{ aspect-ratio:4/5; border-radius:999px 999px 14px 14px; border:3px dashed var(--brown); background:var(--peach-2); display:grid; place-items:center; padding:26% 14% 12%; text-align:center; }
-.new-card .tag{ display:inline-block; font-family:var(--hand); font-weight:400; font-size:1.05rem; color:var(--ink); padding:0 .7em; border:1.5px solid var(--brown); border-radius:999px; margin-bottom:10px; }
-.new-card .tag::before{ content:""; display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--cheek); margin-right:6px; vertical-align:.12em; }
-.new-card .quote{ font-family:var(--hand); font-size:1.6rem; line-height:1.3; color:var(--brown); }
-.new-card img{ width:64px; margin:14px auto 0; }
+.arch.new{ position:relative; }
+.arch.new .tag{ position:absolute; left:50%; bottom:12px; transform:translateX(-50%); font-family:var(--hand); font-size:1.15rem; color:var(--ink); background:var(--peach-2); padding:.05em .9em; border:1.5px solid var(--brown); border-radius:999px; }
+.arch.new .tag::before{ content:""; display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--cheek); margin-right:6px; vertical-align:.12em; }
 .menu-note{ margin:34px auto 0; max-width:34em; text-align:center; font-size:.92rem; }
 .menu-note .kr{ display:block; color:var(--ink); }
 
@@ -227,7 +224,7 @@ section[id]{ scroll-margin-top:64px; }
     <a class="brand" href="#top" aria-label="212Bakeshop home"><img src="tb-bunnies.webp" alt="" width="754" height="401" /><b>212Bakeshop</b></a>
     <nav class="nav" aria-label="Main">
       <a href="#story">Story</a>
-      <a href="#menu">Bakes</a>
+      <a href="#menu">Menu</a>
       <a href="#gifts">Gifts</a>
       <a href="#popups">Pop-ups</a>
       <a href="#visit">Visit</a>
@@ -240,9 +237,8 @@ section[id]{ scroll-margin-top:64px; }
 <section class="hero" id="top">
   <div class="wrap hero-grid">
     <div class="hero-text reveal">
-      <img class="hero-logo wiggle" src="tb-logo.webp" alt="212Bakeshop logo: a pink bunny and a brown bunny with rosy cheeks" width="754" height="530" />
-      <p class="eyebrow">A LITTLE BAKESHOP IN SONGDO</p>
-      <h1>Once upon a time,<br />in a little bakeshop…</h1>
+      <img class="hero-logo wiggle" src="tb-bunnies.webp" alt="212Bakeshop bunnies: a pink bunny and a brown bunny with rosy cheeks" width="754" height="401" />
+      <h1>212 BAKESHOP</h1>
       <p>We bake handmade desserts in our shop every day with good ingredients. Little gifts of happiness for your ordinary days.</p>
       <p class="kr-lead">소소한 일상에 행복을 선물해요 :) 매장에서 매일 좋은 재료로 직접 굽는 수제 디저트</p>
       <div class="hero-cta">
@@ -263,7 +259,7 @@ section[id]{ scroll-margin-top:64px; }
     <div class="wrap story-grid">
       <figure class="arch reveal"><img loading="lazy" src="tb-canele.webp" alt="Freshly baked canelés, glossy and dark" width="720" height="720" /></figure>
       <div class="reveal">
-        <span class="chapter">Chapter I</span>
+        <span class="chapter">Our Story</span>
         <h2 id="story-h">The canelé specialists</h2>
         <p class="lead">Canelé is what we are known for: a deep caramelized crust that crackles when you bite, and a soft, custardy heart. Crisp outside, tender inside, every single batch.</p>
         <p class="lead-kr">까눌레 전문이라 겉바속촉 장인이에요. 매장에서 매일 좋은 재료로 직접 굽습니다.</p>
@@ -277,7 +273,7 @@ section[id]{ scroll-margin-top:64px; }
   <!-- ============ MENU ============ -->
   <section class="sec center" id="menu" aria-labelledby="menu-h" style="padding:clamp(60px,9vw,104px) 0">
     <div class="wrap">
-      <span class="chapter reveal">Chapter II</span>
+      <span class="chapter reveal">Menu</span>
       <h2 id="menu-h" class="reveal">Today’s little bakes</h2>
       <div class="menu-grid">
         <figure class="bake reveal">
@@ -286,15 +282,9 @@ section[id]{ scroll-margin-top:64px; }
           <p>Our specialty. A caramelized crust with a custardy heart.</p>
         </figure>
         <figure class="bake reveal">
-          <div class="new-card">
-            <div>
-              <span class="tag">New</span>
-              <p class="quote">“Crisp outside,<br />chewy within.”</p>
-              <img src="tb-canele-mark.webp" alt="" width="318" height="334" />
-            </div>
-          </div>
+          <div class="arch new"><img loading="lazy" src="tb-buttertteok.webp" alt="Golden shell-shaped butter rice cakes in paper cases with small cups of butter sauce" width="540" height="720" /><span class="tag">New</span></div>
           <h3>Butter Rice Cake<small>버터떡</small></h3>
-          <p>Washed glutinous rice flour, French Elle &amp; Vire gourmet butter, vanilla bean and nutty browned butter.</p>
+          <p>Crisp outside, chewy within. Washed glutinous rice flour, French Elle &amp; Vire gourmet butter, vanilla bean and nutty browned butter.</p>
         </figure>
         <figure class="bake reveal">
           <div class="arch"><img loading="lazy" src="tb-macaron.webp" alt="Macarons with thick yellow filling" width="720" height="720" /></div>
@@ -317,8 +307,7 @@ section[id]{ scroll-margin-top:64px; }
   <section class="sec band-pink" id="gifts" aria-labelledby="gifts-h" style="padding:clamp(60px,9vw,104px) 0">
     <div class="wrap two-grid">
       <div class="reveal">
-        <span class="chapter">Chapter III</span>
-        <h2 id="gifts-h">Tied with a ribbon</h2>
+        <h2 id="gifts-h">Gift Boxes</h2>
         <p class="lead">Gift boxes wrapped with ribbon, for birthdays, thank-yous and the holidays. Ask us in store or give us a call.</p>
         <p class="lead-kr">리본을 두른 선물 상자로 준비해요. 매장이나 전화로 문의해 주세요.</p>
         <a class="btn" href="tel:0507-1363-0554" style="margin-top:14px">Call 0507-1363-0554</a>
@@ -336,8 +325,7 @@ section[id]{ scroll-margin-top:64px; }
   <section class="sec" id="popups" aria-labelledby="popups-h" style="padding:clamp(60px,9vw,104px) 0">
     <div class="wrap two-grid flip">
       <div class="reveal">
-        <span class="chapter">Chapter IV</span>
-        <h2 id="popups-h">Sometimes, we travel</h2>
+        <h2 id="popups-h">Events &amp; Pop-ups</h2>
         <p class="lead">You may have met us at a department store pop-up. Follow our Instagram to catch the next stop.</p>
         <p class="lead-kr">백화점 팝업에서도 만나요. 다음 소식은 인스타그램에서!</p>
         <a class="link" href="https://www.instagram.com/212bakeshop/" target="_blank" rel="noopener">@212bakeshop →</a>
@@ -354,7 +342,7 @@ section[id]{ scroll-margin-top:64px; }
   <!-- ============ GALLERY ============ -->
   <section class="sec band-pink center" id="gallery" aria-labelledby="gallery-h" style="padding:clamp(60px,9vw,104px) 0">
     <div class="wrap">
-      <span class="chapter reveal">Picture Book</span>
+      <span class="chapter reveal">Gallery</span>
       <h2 id="gallery-h" class="reveal">From our oven</h2>
       <div class="gallery reveal">
         <figure><img loading="lazy" src="tb-canele3.webp" alt="Canelés with glossy golden tops" width="720" height="720" /></figure>
@@ -373,8 +361,7 @@ section[id]{ scroll-margin-top:64px; }
   <section class="sec visit" id="visit" aria-labelledby="visit-h" style="padding:clamp(60px,9vw,104px) 0">
     <div class="wrap">
       <div class="center">
-        <span class="chapter reveal">The End… for now</span>
-        <h2 id="visit-h" class="reveal">Come visit us</h2>
+        <h2 id="visit-h" class="reveal">Visit Us</h2>
       </div>
       <div class="visit-grid" style="margin-top:26px">
         <div class="reveal">

@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>212Bakeshop · 212베이크샵 | Canelé &amp; handmade desserts in Songdo</title>
+<meta name="description" content="212Bakeshop (212베이크샵) — a little bakeshop in Songdo, Incheon. Canelé specialists baking handmade desserts every day with good ingredients. 송도 센트럴파크 까눌레·버터떡·수제 디저트." />
+<meta name="theme-color" content="#F3CAB1" />
+
+<link rel="canonical" href="https://212bakeshop-sample.lgt3232.workers.dev/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="212Bakeshop 212베이크샵" />
+<meta property="og:title" content="212Bakeshop · 212베이크샵" />
+<meta property="og:description" content="Once upon a time, in a little bakeshop… 소소한 일상에 행복을 선물해요 :)" />
+<meta property="og:url" content="https://212bakeshop-sample.lgt3232.workers.dev/" />
+<meta property="og:image" content="https://212bakeshop-sample.lgt3232.workers.dev/og-212bakeshop.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:locale" content="ko_KR" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/png" href="favicon.png" />
+<link rel="apple-touch-icon" href="favicon.png" />
+
+<!-- 시안 도메인 = 212bakeshop-sample.lgt3232.workers.dev. 고객 인계 시 grep lgt3232 → canonical·og:url·og:image·JSON-LD url/image 5곳 치환 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Bakery",
+  "name": "212Bakeshop",
+  "alternateName": "212베이크샵",
+  "description": "A little bakeshop in Songdo. Canelé specialists baking handmade desserts every day with good ingredients.",
+  "url": "https://212bakeshop-sample.lgt3232.workers.dev/",
+  "image": "https://212bakeshop-sample.lgt3232.workers.dev/og-212bakeshop.jpg",
+  "telephone": "+82-507-1363-0554",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "센트럴로 160 송도센트럴파크푸르지오 판매시설 C동 184호",
+    "addressLocality": "연수구",
+    "addressRegion": "인천광역시",
+    "addressCountry": "KR"
+  },
+  "servesCuisine": ["Dessert", "Bakery"],
+  "hasMap": "https://map.naver.com/p/entry/place/1492004940",
+  "sameAs": [
+    "https://www.instagram.com/212bakeshop/",
+    "https://blog.naver.com/212bakeshop"
+  ]
+}
+</script>
+
+<!-- Fonts: 손글씨 영문 Patrick Hand(é·… 포함) → 한글은 Gaegu(연필 손글씨) + 본문 Gowun Dodum — 전부 OFL · 로컬 서브셋 self-host -->
+<link rel="preload" as="font" type="font/woff2" href="patrickhand-400.woff2" crossorigin />
+<link rel="preload" as="font" type="font/woff2" href="gowun-400.woff2" crossorigin />
+
+<style>
+@font-face{ font-family:"Gaegu"; font-style:normal; font-weight:400; font-display:swap; src:url("gaegu-400.woff2") format("woff2"); }
+@font-face{ font-family:"Patrick Hand"; font-style:normal; font-weight:400; font-display:swap; src:url("patrickhand-400.woff2") format("woff2"); }
+@font-face{ font-family:"Gowun Dodum"; font-style:normal; font-weight:400; font-display:swap; src:url("gowun-400.woff2") format("woff2"); }
+
+/* ============================================================
+   212Bakeshop — 원페이지 · 파스텔 옛날 동화책
+   색은 로고 이미지(두 토끼) 실측값 그대로: 피치 바탕 · 핑크 토끼 · 갈색 토끼 · 볼터치 빨강 · 워드마크 갈색
+   모티프: 동화책 챕터 · 아치 창문 액자 · 스캘럽(토끼 테두리의 몽글몽글) 경계 · 워드마크의 반짝이(✦) · 종이 질감
+   ============================================================ */
+:root{
+  --peach:   #F3CAB1;   /* 로고 바탕 */
+  --peach-2: #F6CCB5;
+  --pink:    #E1B4A3;   /* 핑크 토끼 */
+  --rose:    #D7A792;
+  --tan:     #C99474;   /* 갈색 토끼 */
+  --caramel: #B97C59;
+  --brown:   #96472A;   /* 워드마크 · 제목 */
+  --ink:     #6A3520;   /* 본문(워드마크 갈색을 조금 짙게) */
+  --ear:     #855E37;   /* 토끼 귀 안쪽 */
+  --cheek:   #D74A39;   /* 볼터치 — 점 장식 전용 */
+  --cream:   #FFF4EC;   /* 갈색 위 글자(피치를 밝힌 톤) — 대비 8.6 */
+  --hand: "Patrick Hand", "Gaegu", "Gowun Dodum", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --body: "Gowun Dodum", "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  --maxw: 1080px;
+  --gut: clamp(20px, 5vw, 44px);
+  --grain: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .25 0 0 0 0 .15 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  --spark: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M10 0c.8 5.2 4.8 9.2 10 10-5.2.8-9.2 4.8-10 10-.8-5.2-4.8-9.2-10-10C5.2 9.2 9.2 5.2 10 0z' fill='%2396472A'/%3E%3C/svg%3E");
+}
+*,*::before,*::after{ box-sizing:border-box; }
+html{ -webkit-text-size-adjust:100%; }
+body{ margin:0; font-family:var(--body); color:var(--ink); background:var(--peach); line-height:1.8; -webkit-font-smoothing:antialiased; }
+body::before{ content:""; position:fixed; inset:0; background:var(--grain); pointer-events:none; z-index:100; mix-blend-mode:multiply; }
+img{ max-width:100%; height:auto; display:block; }
+a{ color:inherit; text-decoration:none; }
+.wrap{ width:100%; max-width:var(--maxw); margin:0 auto; padding:0 var(--gut); }
+.kr{ font-family:var(--body); }
+section[id]{ scroll-margin-top:64px; }
+
+/* ---------- 반짝이 · 챕터 라벨 ---------- */
+.chapter{ display:inline-flex; align-items:center; gap:10px; font-family:var(--hand); font-size:1.5rem; color:var(--brown); letter-spacing:.03em; }
+.chapter::before, .chapter::after{ content:""; width:13px; height:13px; background:var(--spark) center/contain no-repeat; opacity:.75; }
+.sec h2{ font-family:var(--hand); font-weight:400; color:var(--brown); font-size:clamp(2rem,5.6vw,3.2rem); line-height:1.15; margin:.15em 0 .45em; word-break:keep-all; }
+.sec .lead{ max-width:34em; word-break:keep-all; }
+.sec .lead-kr{ font-size:.95rem; color:var(--ink); margin-top:.4em; word-break:keep-all; }
+.center{ text-align:center; }
+.center .lead{ margin-left:auto; margin-right:auto; }
+
+/* ---------- 버튼: 바느질 라벨 ---------- */
+.btn{ display:inline-flex; align-items:center; gap:8px; padding:.62em 1.3em; border-radius:999px; background:var(--brown); color:var(--cream); font-family:var(--hand); font-size:1.18rem; font-weight:400; outline:1.5px dashed rgba(246,204,181,.7); outline-offset:-6px; transition:transform .15s ease, background .15s ease; }
+.btn.ghost{ background:transparent; color:var(--ink); outline-color:var(--caramel); box-shadow:inset 0 0 0 1.5px var(--brown); }
+.btn:active{ transform:scale(.97); }
+.btn:focus-visible, .link:focus-visible{ outline:3px solid var(--cheek); outline-offset:3px; }
+@media (hover:hover){ .btn:hover{ transform:translateY(-2px) rotate(-1deg); } }
+.link{ font-family:var(--hand); font-size:1.15rem; color:var(--ink); border-bottom:2px dotted var(--caramel); }
+
+/* ---------- 스캘럽 경계 (윗 섹션 색이 아래로 몽글몽글 흘러내림) ---------- */
+.scal{ height:16px; margin-bottom:-1px; background:radial-gradient(circle at 50% 0, var(--c) 11px, transparent 11.5px) 0 0 / 24px 16px repeat-x; position:relative; z-index:2; }
+
+/* ---------- 아치 창문 액자 ---------- */
+.arch{ margin:0; border-radius:999px 999px 14px 14px; overflow:hidden; border:3px solid var(--brown); background:var(--peach-2); }
+.arch img{ width:100%; height:100%; object-fit:cover; }
+
+/* ---------- header ---------- */
+.site-head{ position:sticky; top:0; z-index:60; background:var(--peach); border-bottom:1.5px dashed var(--caramel); }
+.site-head .wrap{ display:flex; align-items:center; justify-content:space-between; gap:14px; height:62px; }
+.brand{ display:flex; align-items:center; gap:10px; }
+.brand img{ width:62px; }
+.brand b{ font-family:var(--hand); font-weight:400; font-size:1.5rem; color:var(--brown); letter-spacing:.01em; }
+.nav{ display:flex; align-items:center; gap:clamp(12px,2.2vw,26px); }
+.nav a:not(.btn){ font-family:var(--hand); font-size:1.18rem; color:var(--ink); }
+.nav a:not(.btn):hover{ color:var(--brown); }
+.nav .btn{ font-size:1.05rem; padding:.4em 1.05em; }
+@media (max-width:860px){ .nav a:not(.btn){ display:none; } }
+
+/* ---------- hero ---------- */
+.hero{ padding:clamp(34px,6vw,70px) 0 clamp(50px,7vw,86px); }
+.hero-grid{ display:grid; gap:34px; align-items:center; }
+.hero-logo{ width:min(92%,420px); margin:0 auto 8px; }
+.hero .eyebrow{ font-family:var(--hand); color:var(--ink); font-size:1.12rem; letter-spacing:.14em; margin:0 0 4px; }
+.hero h1{ font-family:var(--hand); font-weight:400; color:var(--brown); font-size:clamp(2.2rem,6.4vw,3.7rem); line-height:1.1; margin:0 0 16px; }
+.hero p{ margin:0 0 .5em; }
+.hero .kr-lead{ color:var(--ink); font-size:.96rem; }
+.hero-cta{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; margin-top:22px; }
+.hero-text{ text-align:center; }
+.hero-photo{ width:min(100%,420px); margin:0 auto; aspect-ratio:4/5; }
+.hero-photo .dot{ position:absolute; }
+
+/* ---------- story ---------- */
+.band-pink{ background:var(--pink); }
+.story-grid{ display:grid; gap:36px; align-items:center; }
+.story .arch{ aspect-ratio:4/5; max-width:420px; margin:0 auto; }
+.story .mark{ width:74px; margin:18px 0 0; }
+
+/* ---------- menu ---------- */
+.menu-grid{ display:grid; gap:26px; margin-top:34px; }
+.bake{ margin:0; text-align:center; }
+.bake .arch{ aspect-ratio:4/5; }
+.bake h3{ font-family:var(--hand); font-weight:400; font-size:1.7rem; color:var(--brown); margin:14px 0 0; line-height:1.2; }
+.bake h3 small{ display:block; font-family:var(--body); font-weight:400; font-size:.86rem; color:var(--ink); margin-top:2px; }
+.bake p{ margin:8px auto 0; font-size:.94rem; max-width:22em; }
+.new-card{ aspect-ratio:4/5; border-radius:999px 999px 14px 14px; border:3px dashed var(--brown); background:var(--peach-2); display:grid; place-items:center; padding:26% 14% 12%; text-align:center; }
+.new-card .tag{ display:inline-block; font-family:var(--hand); font-weight:400; font-size:1.05rem; color:var(--ink); padding:0 .7em; border:1.5px solid var(--brown); border-radius:999px; margin-bottom:10px; }
+.new-card .tag::before{ content:""; display:inline-block; width:8px; height:8px; border-radius:50%; background:var(--cheek); margin-right:6px; vertical-align:.12em; }
+.new-card .quote{ font-family:var(--hand); font-size:1.6rem; line-height:1.3; color:var(--brown); }
+.new-card img{ width:64px; margin:14px auto 0; }
+.menu-note{ margin:34px auto 0; max-width:34em; text-align:center; font-size:.92rem; }
+.menu-note .kr{ display:block; color:var(--ink); }
+
+/* ---------- gifts / popups ---------- */
+.two-grid{ display:grid; gap:34px; align-items:center; }
+.pair{ display:grid; grid-template-columns:1fr 1fr; gap:14px; }
+.pair .arch{ aspect-ratio:3/4; }
+.pair .arch:nth-child(2){ margin-top:34px; }
+
+/* ---------- gallery ---------- */
+.gallery{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:30px; }
+.gallery figure{ margin:0; border:3px solid var(--brown); border-radius:14px; overflow:hidden; background:var(--peach-2); transform:rotate(var(--r,0deg)); }
+.gallery img{ width:100%; aspect-ratio:1/1; object-fit:cover; }
+.gallery figure:nth-child(3n+1){ --r:-1.2deg; } .gallery figure:nth-child(3n+2){ --r:.9deg; } .gallery figure:nth-child(3n){ --r:-.5deg; }
+
+/* ---------- visit ---------- */
+.visit-grid{ display:grid; gap:30px; align-items:start; }
+.info{ margin:0; border-top:2px solid var(--brown); border-bottom:2px solid var(--brown); }
+.info .row{ display:grid; grid-template-columns:92px 1fr; gap:12px; padding:13px 2px; }
+.info .row + .row{ border-top:1.5px dashed var(--caramel); }
+.info dt{ font-family:var(--hand); font-weight:400; font-size:1.2rem; color:var(--ink); line-height:1.4; }
+.info dd{ margin:0; word-break:keep-all; }
+.info dd .kr{ display:block; font-size:.88rem; color:var(--ink); margin-top:2px; }
+.info a.tel{ border-bottom:2px dotted var(--caramel); }
+.visit .acts{ display:flex; gap:12px; flex-wrap:wrap; margin-top:20px; }
+.mapframe{ width:100%; aspect-ratio:4/3; border:3px solid var(--brown); border-radius:14px; display:block; background:var(--peach-2); }
+
+/* ---------- footer ---------- */
+.foot{ background:var(--brown); color:var(--cream); padding:46px 0 44px; text-align:center; }
+.foot img{ width:min(60%,260px); margin:0 auto 10px; }
+.foot b{ font-family:var(--hand); font-weight:400; font-size:1.8rem; display:block; }
+.foot p{ margin:.3em 0; font-size:.88rem; }
+.foot .links{ display:flex; justify-content:center; flex-wrap:wrap; gap:6px 20px; margin:14px 0; font-family:var(--hand); font-size:1.15rem; }
+.foot .links a{ border-bottom:1.5px dotted rgba(246,204,181,.7); }
+
+/* ---------- motion (강제 재생) ---------- */
+.reveal{ opacity:0; transform:translateY(18px); transition:opacity .7s ease, transform .7s cubic-bezier(.22,.61,.36,1); }
+.reveal.in{ opacity:1; transform:none; }
+.wiggle{ animation:wig 5s ease-in-out infinite; transform-origin:50% 90%; }
+@keyframes wig{ 0%,100%{ transform:rotate(0); } 50%{ transform:rotate(-2.5deg); } }
+
+/* ---------- ≥720 ---------- */
+@media (min-width:720px){
+  .menu-grid{ grid-template-columns:repeat(2,1fr); gap:34px 28px; }
+  .gallery{ grid-template-columns:repeat(3,1fr); gap:16px; }
+}
+/* ---------- ≥980 PC ---------- */
+@media (min-width:980px){
+  .hero-grid{ grid-template-columns:1.1fr .9fr; gap:56px; }
+  .hero-text{ text-align:left; }
+  .hero-logo{ margin:0 0 8px; }
+  .hero-cta{ justify-content:flex-start; }
+  .story-grid{ grid-template-columns:.9fr 1.1fr; gap:64px; }
+  .menu-grid{ grid-template-columns:repeat(4,1fr); gap:24px; }
+  .two-grid{ grid-template-columns:1fr 1fr; gap:64px; }
+  .two-grid.flip > :first-child{ order:2; }
+  .visit-grid{ grid-template-columns:1fr 1fr; gap:48px; }
+}
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="212Bakeshop home"><img src="tb-bunnies.webp" alt="" width="754" height="401" /><b>212Bakeshop</b></a>
+    <nav class="nav" aria-label="Main">
+      <a href="#story">Story</a>
+      <a href="#menu">Bakes</a>
+      <a href="#gifts">Gifts</a>
+      <a href="#popups">Pop-ups</a>
+      <a href="#visit">Visit</a>
+      <a class="btn" href="https://www.instagram.com/212bakeshop/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div class="hero-text reveal">
+      <img class="hero-logo wiggle" src="tb-logo.webp" alt="212Bakeshop logo: a pink bunny and a brown bunny with rosy cheeks" width="754" height="530" />
+      <p class="eyebrow">A LITTLE BAKESHOP IN SONGDO</p>
+      <h1>Once upon a time,<br />in a little bakeshop…</h1>
+      <p>We bake handmade desserts in our shop every day with good ingredients. Little gifts of happiness for your ordinary days.</p>
+      <p class="kr-lead">소소한 일상에 행복을 선물해요 :) 매장에서 매일 좋은 재료로 직접 굽는 수제 디저트</p>
+      <div class="hero-cta">
+        <a class="btn" href="#menu">See today’s bakes</a>
+        <a class="btn ghost" href="#visit">Come visit</a>
+      </div>
+    </div>
+    <figure class="arch hero-photo reveal"><img src="tb-canele-hero.webp" alt="Rows of dark caramelized canelés with golden centers" width="900" height="900" /></figure>
+  </div>
+</section>
+
+<div class="scal" style="--c:var(--peach);background-color:var(--pink)"></div>
+
+<main>
+
+  <!-- ============ STORY ============ -->
+  <section class="sec story band-pink" id="story" aria-labelledby="story-h" style="padding:clamp(60px,9vw,104px) 0">
+    <div class="wrap story-grid">
+      <figure class="arch reveal"><img loading="lazy" src="tb-canele.webp" alt="Freshly baked canelés, glossy and dark" width="720" height="720" /></figure>
+      <div class="reveal">
+        <span class="chapter">Chapter I</span>
+        <h2 id="story-h">The canelé specialists</h2>
+        <p class="lead">Canelé is what we are known for: a deep caramelized crust that crackles when you bite, and a soft, custardy heart. Crisp outside, tender inside, every single batch.</p>
+        <p class="lead-kr">까눌레 전문이라 겉바속촉 장인이에요. 매장에서 매일 좋은 재료로 직접 굽습니다.</p>
+        <img class="mark wiggle" src="tb-canele-mark.webp" alt="" width="318" height="334" />
+      </div>
+    </div>
+  </section>
+
+  <div class="scal" style="--c:var(--pink);background-color:var(--peach)"></div>
+
+  <!-- ============ MENU ============ -->
+  <section class="sec center" id="menu" aria-labelledby="menu-h" style="padding:clamp(60px,9vw,104px) 0">
+    <div class="wrap">
+      <span class="chapter reveal">Chapter II</span>
+      <h2 id="menu-h" class="reveal">Today’s little bakes</h2>
+      <div class="menu-grid">
+        <figure class="bake reveal">
+          <div class="arch"><img loading="lazy" src="tb-canele2.webp" alt="Golden canelés lined up" width="720" height="720" /></div>
+          <h3>Canelé<small>까눌레</small></h3>
+          <p>Our specialty. A caramelized crust with a custardy heart.</p>
+        </figure>
+        <figure class="bake reveal">
+          <div class="new-card">
+            <div>
+              <span class="tag">New</span>
+              <p class="quote">“Crisp outside,<br />chewy within.”</p>
+              <img src="tb-canele-mark.webp" alt="" width="318" height="334" />
+            </div>
+          </div>
+          <h3>Butter Rice Cake<small>버터떡</small></h3>
+          <p>Washed glutinous rice flour, French Elle &amp; Vire gourmet butter, vanilla bean and nutty browned butter.</p>
+        </figure>
+        <figure class="bake reveal">
+          <div class="arch"><img loading="lazy" src="tb-macaron.webp" alt="Macarons with thick yellow filling" width="720" height="720" /></div>
+          <h3>Macarons<small>마카롱</small></h3>
+          <p>Little sandwiches with plenty of filling.</p>
+        </figure>
+        <figure class="bake reveal">
+          <div class="arch"><img loading="lazy" src="tb-pound.webp" alt="Marbled pound cakes on a cooling rack" width="720" height="720" /></div>
+          <h3>Pound Cakes<small>파운드케이크</small></h3>
+          <p>Buttery little loaves, baked in rows.</p>
+        </figure>
+      </div>
+      <p class="menu-note reveal">Our line-up changes often. See <a class="link" href="https://www.instagram.com/212bakeshop/" target="_blank" rel="noopener">Instagram</a> for today’s bakes.<span class="kr">메뉴와 가격은 시기마다 달라질 수 있어요.</span></p>
+    </div>
+  </section>
+
+  <div class="scal" style="--c:var(--peach);background-color:var(--pink)"></div>
+
+  <!-- ============ GIFTS ============ -->
+  <section class="sec band-pink" id="gifts" aria-labelledby="gifts-h" style="padding:clamp(60px,9vw,104px) 0">
+    <div class="wrap two-grid">
+      <div class="reveal">
+        <span class="chapter">Chapter III</span>
+        <h2 id="gifts-h">Tied with a ribbon</h2>
+        <p class="lead">Gift boxes wrapped with ribbon, for birthdays, thank-yous and the holidays. Ask us in store or give us a call.</p>
+        <p class="lead-kr">리본을 두른 선물 상자로 준비해요. 매장이나 전화로 문의해 주세요.</p>
+        <a class="btn" href="tel:0507-1363-0554" style="margin-top:14px">Call 0507-1363-0554</a>
+      </div>
+      <div class="pair reveal">
+        <figure class="arch"><img loading="lazy" src="tb-gift.webp" alt="Cream gift boxes tied with black ribbons and a smiling canelé logo" width="800" height="800" /></figure>
+        <figure class="arch"><img loading="lazy" src="tb-gift2.webp" alt="Holiday gift boxes with red and green ribbons" width="720" height="720" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="scal" style="--c:var(--pink);background-color:var(--peach)"></div>
+
+  <!-- ============ POP-UPS ============ -->
+  <section class="sec" id="popups" aria-labelledby="popups-h" style="padding:clamp(60px,9vw,104px) 0">
+    <div class="wrap two-grid flip">
+      <div class="reveal">
+        <span class="chapter">Chapter IV</span>
+        <h2 id="popups-h">Sometimes, we travel</h2>
+        <p class="lead">You may have met us at a department store pop-up. Follow our Instagram to catch the next stop.</p>
+        <p class="lead-kr">백화점 팝업에서도 만나요. 다음 소식은 인스타그램에서!</p>
+        <a class="link" href="https://www.instagram.com/212bakeshop/" target="_blank" rel="noopener">@212bakeshop →</a>
+      </div>
+      <div class="pair reveal">
+        <figure class="arch"><img loading="lazy" src="tb-popup.webp" alt="212Bakeshop pop-up stand with shopping bags and gift boxes" width="720" height="720" /></figure>
+        <figure class="arch"><img loading="lazy" src="tb-popup2.webp" alt="Pop-up counter with a Delicious Pop-up sign and macarons" width="576" height="720" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="scal" style="--c:var(--peach);background-color:var(--pink)"></div>
+
+  <!-- ============ GALLERY ============ -->
+  <section class="sec band-pink center" id="gallery" aria-labelledby="gallery-h" style="padding:clamp(60px,9vw,104px) 0">
+    <div class="wrap">
+      <span class="chapter reveal">Picture Book</span>
+      <h2 id="gallery-h" class="reveal">From our oven</h2>
+      <div class="gallery reveal">
+        <figure><img loading="lazy" src="tb-canele3.webp" alt="Canelés with glossy golden tops" width="720" height="720" /></figure>
+        <figure><img loading="lazy" src="tb-strawberry.webp" alt="Pink macarons topped with cream and fresh strawberries" width="717" height="720" /></figure>
+        <figure><img loading="lazy" src="tb-waffle.webp" alt="Chocolate waffle dusted with cocoa and a cream-topped drink" width="720" height="720" /></figure>
+        <figure><img loading="lazy" src="tb-macaron2.webp" alt="Trays full of macaron shells" width="720" height="611" /></figure>
+        <figure><img loading="lazy" src="tb-financier.webp" alt="Golden little cakes in a baking tray" width="576" height="720" /></figure>
+        <figure><img loading="lazy" src="tb-pound2.webp" alt="Rows of pound cakes on a tray" width="720" height="720" /></figure>
+      </div>
+    </div>
+  </section>
+
+  <div class="scal" style="--c:var(--pink);background-color:var(--peach)"></div>
+
+  <!-- ============ VISIT ============ -->
+  <section class="sec visit" id="visit" aria-labelledby="visit-h" style="padding:clamp(60px,9vw,104px) 0">
+    <div class="wrap">
+      <div class="center">
+        <span class="chapter reveal">The End… for now</span>
+        <h2 id="visit-h" class="reveal">Come visit us</h2>
+      </div>
+      <div class="visit-grid" style="margin-top:26px">
+        <div class="reveal">
+          <dl class="info">
+            <div class="row"><dt>Address</dt><dd>Shop C-184, Songdo Central Park Prugio,<br />160 Central-ro, Yeonsu-gu, Incheon<span class="kr">인천 연수구 센트럴로 160 송도센트럴파크푸르지오 판매시설 C동 184호</span></dd></div>
+            <div class="row"><dt>Finding us</dt><dd>Turn right at 안스베이커리 toward G-Tower. We’re on the left of 메가커피.<span class="kr">안스베이커리에서 우회전(G타워 방향), 메가커피 좌측</span></dd></div>
+            <div class="row"><dt>Subway</dt><dd>Incheon Nat’l Univ. Stn. (Incheon Line 1), Exit 4 · 760 m<span class="kr">인천1호선 인천대입구역 4번 출구</span></dd></div>
+            <div class="row"><dt>Hours</dt><dd>Opens at 12:00<span class="kr">요일별 영업시간·휴무는 네이버 플레이스에서 확인해 주세요</span></dd></div>
+            <div class="row"><dt>Call</dt><dd><a class="tel" href="tel:0507-1363-0554">0507-1363-0554</a></dd></div>
+          </dl>
+          <div class="acts">
+            <a class="btn" href="https://map.naver.com/p/entry/place/1492004940" target="_blank" rel="noopener">Naver Map</a>
+            <a class="btn ghost" href="https://blog.naver.com/212bakeshop" target="_blank" rel="noopener">Our blog</a>
+          </div>
+        </div>
+        <iframe class="mapframe reveal" src="https://www.google.com/maps?q=%EC%9D%B8%EC%B2%9C%20%EC%97%B0%EC%88%98%EA%B5%AC%20%EC%84%BC%ED%8A%B8%EB%9F%B4%EB%A1%9C%20160&output=embed" title="212Bakeshop location map — 인천 연수구 센트럴로 160" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <img src="tb-bunnies.webp" alt="" width="754" height="401" />
+    <b>212Bakeshop</b>
+    <p class="kr">소소한 일상에 행복을 선물해요 :)</p>
+    <div class="links">
+      <a href="https://www.instagram.com/212bakeshop/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://blog.naver.com/212bakeshop" target="_blank" rel="noopener">Blog</a>
+      <a href="https://map.naver.com/p/entry/place/1492004940" target="_blank" rel="noopener">Naver Map</a>
+      <a href="tel:0507-1363-0554">Call</a>
+    </div>
+    <p class="kr">인천 연수구 센트럴로 160 송도센트럴파크푸르지오 판매시설 C동 184호 · 0507-1363-0554</p>
+    <p>© 2026 212Bakeshop 212베이크샵</p>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var items=[].slice.call(document.querySelectorAll('.reveal'));
+  var show=function(el){ el.classList.add('in'); };
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ show(e.target); io.unobserve(e.target); } }); }, {threshold:.06});
+    items.forEach(function(el){ io.observe(el); });
+    setTimeout(function(){ items.forEach(show); }, 2400);
+  } else { items.forEach(show); }
+
+  var head=document.querySelector('.site-head');
+  var ease=function(t){ return t<.5 ? 4*t*t*t : 1-Math.pow(-2*t+2,3)/2; };
+  document.addEventListener('click', function(ev){
+    var a=ev.target.closest && ev.target.closest('a[href^="#"]'); if(!a) return;
+    var id=a.getAttribute('href');
+    var target=(id==='#'||id==='#top') ? document.body : document.querySelector(id); if(!target) return;
+    ev.preventDefault();
+    var off=(head?head.offsetHeight:0)+6, startY=window.pageYOffset;
+    var endY=target===document.body?0:Math.max(0,target.getBoundingClientRect().top+startY-off);
+    var dist=endY-startY, dur=Math.min(900,Math.max(420,Math.abs(dist)*.45)), t0=null;
+    function step(ts){ if(t0===null) t0=ts; var p=Math.min(1,(ts-t0)/dur); window.scrollTo(0,startY+dist*ease(p)); if(p<1) requestAnimationFrame(step); }
+    requestAnimationFrame(step);
+    if(history.replaceState) history.replaceState(null,'',id);
+  });
+})();
+</script>
+<noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
+</body>
+</html>
